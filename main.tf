@@ -1,3 +1,8 @@
+resource "azurerm_resource_group" "myresourcegroup" {
+  name     = "${var.prefix}-workshop"
+  location = "${var.location}"
+}
+
 module "web_app_container" {
   source              = "app.terraform.io/khemani/web-app-container/azurerm"
   name                = "${var.prefix}"
